@@ -7,10 +7,22 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Controller
 public class WebController {
-    @GetMapping("/greeting")
-    public String homepage()
+
+    @GetMapping("/home")
+    public String home()
     {
-        System.out.println("testing");
-        return "homepage";
+        return "home";
+    }
+
+    @GetMapping("/login")
+    public String login()
+    {
+        return "login";
+    }
+
+    @GetMapping("/register")
+    public String register()
+    {
+        return "register";
     }
 }
